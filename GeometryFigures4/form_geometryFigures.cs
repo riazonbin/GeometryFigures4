@@ -96,7 +96,14 @@ namespace GeometryFigures4
 
         private void mtb_ThicknessOfPen_Leave(object sender, EventArgs e)
         {
-            thicknessOfPen = int.Parse(mtb_ThicknessOfPen.Text);
+            try
+            {
+                thicknessOfPen = int.Parse(mtb_ThicknessOfPen.Text);
+            }
+            catch(FormatException)
+            {
+                thicknessOfPen = 1;
+            }
         }
     }
 }
