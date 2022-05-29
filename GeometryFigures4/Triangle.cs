@@ -1,4 +1,4 @@
-﻿// Zaripov Riyaz 220th group, 24.05.22 Figures-3
+﻿// Zaripov Riyaz 220th group, 30.05.22 Figures-4
 
 using System;
 using System.Drawing;
