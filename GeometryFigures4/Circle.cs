@@ -30,6 +30,5 @@ namespace GeometryFigures4
         {
             return $"Circle at {startingPoint}, Width: {Width}, Height {Height}";
         }
-
     }
 }

@@ -69,7 +69,6 @@ namespace GeometryFigures4
                     var x3 = int.Parse(coords3[0]);
                     var y3 = int.Parse(coords3[1]);
 
-
                     Figures.Add(new Triangle(new Point(x1, y1), new Point(x2, y2),
                                             new Point(x3, y3)));
                 }

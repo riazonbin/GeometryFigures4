@@ -8,13 +8,13 @@ namespace GeometryFigures4
 {
     public partial class form_geometryFigures : Form
     {
+        Color colorOfPen = Color.Black;
+        int thicknessOfPen = 1;
+
         public form_geometryFigures()
         {
             InitializeComponent();
         }
-
-        Color colorOfPen = Color.Black;
-        int thicknessOfPen = 1;
 
         private void btn_addFigure_Click(object sender, EventArgs e)
         {
