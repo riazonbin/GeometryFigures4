@@ -56,6 +56,8 @@ namespace GeometryFigures4
         }
         private void saveFiguresToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            saveFileDialog.Filter = "pic files (*.pic)|*.pic";
+
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Figures.Save(saveFileDialog.FileName);
@@ -64,6 +66,9 @@ namespace GeometryFigures4
 
         private void loadFiguresToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            loadFileDialog.Filter = "pic files (*.pic)|*.pic";
+
             if (loadFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Figures.Load(loadFileDialog.FileName);

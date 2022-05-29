@@ -34,8 +34,8 @@ namespace GeometryFigures4
             this.btn_addFigure = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.loadFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuStripMain = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripMainForm = new System.Windows.Forms.MenuStrip();
+            this.menuStripFile = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFiguresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadFiguresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearFiguresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +47,7 @@ namespace GeometryFigures4
             this.btn_chooseColorOfPen = new System.Windows.Forms.Button();
             this.panel_FigurePaper = new System.Windows.Forms.Panel();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.menuStrip1.SuspendLayout();
+            this.menuStripMainForm.SuspendLayout();
             this.panel_chooseFigure.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,29 +74,25 @@ namespace GeometryFigures4
             this.btn_addFigure.UseVisualStyleBackColor = true;
             this.btn_addFigure.Click += new System.EventHandler(this.btn_addFigure_Click);
             // 
-            // loadFileDialog
+            // menuStripMainForm
             // 
-            this.loadFileDialog.FileName = "openFileDialog1";
+            this.menuStripMainForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripFile});
+            this.menuStripMainForm.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMainForm.Name = "menuStripMainForm";
+            this.menuStripMainForm.Size = new System.Drawing.Size(800, 24);
+            this.menuStripMainForm.TabIndex = 6;
+            this.menuStripMainForm.Text = "Menu strip";
             // 
-            // menuStrip1
+            // menuStripFile
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuStripMain});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 6;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuStripMain
-            // 
-            this.menuStripMain.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveFiguresToolStripMenuItem,
             this.loadFiguresToolStripMenuItem,
             this.clearFiguresToolStripMenuItem});
-            this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(37, 20);
-            this.menuStripMain.Text = "File";
+            this.menuStripFile.Name = "menuStripFile";
+            this.menuStripFile.Size = new System.Drawing.Size(37, 20);
+            this.menuStripFile.Text = "File";
             // 
             // saveFiguresToolStripMenuItem
             // 
@@ -198,12 +194,12 @@ namespace GeometryFigures4
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel_FigurePaper);
             this.Controls.Add(this.panel_chooseFigure);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStripMainForm);
+            this.MainMenuStrip = this.menuStripMainForm;
             this.Name = "form_geometryFigures";
             this.Text = "Geometry figures";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripMainForm.ResumeLayout(false);
+            this.menuStripMainForm.PerformLayout();
             this.panel_chooseFigure.ResumeLayout(false);
             this.panel_chooseFigure.PerformLayout();
             this.ResumeLayout(false);
@@ -216,8 +212,8 @@ namespace GeometryFigures4
         private System.Windows.Forms.Button btn_addFigure;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog loadFileDialog;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuStripMain;
+        private System.Windows.Forms.MenuStrip menuStripMainForm;
+        private System.Windows.Forms.ToolStripMenuItem menuStripFile;
         private System.Windows.Forms.ToolStripMenuItem saveFiguresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadFiguresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearFiguresToolStripMenuItem;
