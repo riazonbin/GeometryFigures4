@@ -81,7 +81,6 @@ namespace GeometryFigures4
             {
                 MessageBox.Show("Данные либо отсутствуют, либо введены некорректно!",
                                 "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
     }

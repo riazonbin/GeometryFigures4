@@ -40,12 +40,13 @@ namespace GeometryFigures4
             this.loadFiguresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clearFiguresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_chooseFigure = new System.Windows.Forms.Panel();
+            this.lb_descriptionToColorAndThickness = new System.Windows.Forms.Label();
+            this.lb_chooseFigure = new System.Windows.Forms.Label();
             this.lb_ThicknessOfPen = new System.Windows.Forms.Label();
-            this.mtb_chooseThicknessOfPen = new System.Windows.Forms.MaskedTextBox();
-            this.btn_chooseColor = new System.Windows.Forms.Button();
+            this.mtb_ThicknessOfPen = new System.Windows.Forms.MaskedTextBox();
+            this.btn_chooseColorOfPen = new System.Windows.Forms.Button();
             this.panel_FigurePaper = new System.Windows.Forms.Panel();
             this.colorDialog = new System.Windows.Forms.ColorDialog();
-            this.lb_chooseFigure = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel_chooseFigure.SuspendLayout();
             this.SuspendLayout();
@@ -120,10 +121,11 @@ namespace GeometryFigures4
             // 
             // panel_chooseFigure
             // 
+            this.panel_chooseFigure.Controls.Add(this.lb_descriptionToColorAndThickness);
             this.panel_chooseFigure.Controls.Add(this.lb_chooseFigure);
             this.panel_chooseFigure.Controls.Add(this.lb_ThicknessOfPen);
-            this.panel_chooseFigure.Controls.Add(this.mtb_chooseThicknessOfPen);
-            this.panel_chooseFigure.Controls.Add(this.btn_chooseColor);
+            this.panel_chooseFigure.Controls.Add(this.mtb_ThicknessOfPen);
+            this.panel_chooseFigure.Controls.Add(this.btn_chooseColorOfPen);
             this.panel_chooseFigure.Controls.Add(this.cb_chooseFigure);
             this.panel_chooseFigure.Controls.Add(this.btn_addFigure);
             this.panel_chooseFigure.Dock = System.Windows.Forms.DockStyle.Left;
@@ -131,6 +133,24 @@ namespace GeometryFigures4
             this.panel_chooseFigure.Name = "panel_chooseFigure";
             this.panel_chooseFigure.Size = new System.Drawing.Size(266, 426);
             this.panel_chooseFigure.TabIndex = 7;
+            // 
+            // lb_descriptionToColorAndThickness
+            // 
+            this.lb_descriptionToColorAndThickness.ForeColor = System.Drawing.Color.Gray;
+            this.lb_descriptionToColorAndThickness.Location = new System.Drawing.Point(3, 124);
+            this.lb_descriptionToColorAndThickness.Name = "lb_descriptionToColorAndThickness";
+            this.lb_descriptionToColorAndThickness.Size = new System.Drawing.Size(263, 33);
+            this.lb_descriptionToColorAndThickness.TabIndex = 7;
+            this.lb_descriptionToColorAndThickness.Text = "(Standart thickness is 1 and standart color is black)";
+            // 
+            // lb_chooseFigure
+            // 
+            this.lb_chooseFigure.AutoSize = true;
+            this.lb_chooseFigure.Location = new System.Drawing.Point(3, 15);
+            this.lb_chooseFigure.Name = "lb_chooseFigure";
+            this.lb_chooseFigure.Size = new System.Drawing.Size(81, 15);
+            this.lb_chooseFigure.TabIndex = 6;
+            this.lb_chooseFigure.Text = "Choose figure";
             // 
             // lb_ThicknessOfPen
             // 
@@ -141,25 +161,25 @@ namespace GeometryFigures4
             this.lb_ThicknessOfPen.TabIndex = 5;
             this.lb_ThicknessOfPen.Text = "Thickness of pen";
             // 
-            // mtb_chooseThicknessOfPen
+            // mtb_ThicknessOfPen
             // 
-            this.mtb_chooseThicknessOfPen.Location = new System.Drawing.Point(104, 97);
-            this.mtb_chooseThicknessOfPen.Mask = "000";
-            this.mtb_chooseThicknessOfPen.Name = "mtb_chooseThicknessOfPen";
-            this.mtb_chooseThicknessOfPen.Size = new System.Drawing.Size(23, 23);
-            this.mtb_chooseThicknessOfPen.TabIndex = 4;
-            this.mtb_chooseThicknessOfPen.ValidatingType = typeof(int);
-            this.mtb_chooseThicknessOfPen.Leave += new System.EventHandler(this.mtb_chooseThicknessOfPen_Leave);
+            this.mtb_ThicknessOfPen.Location = new System.Drawing.Point(104, 97);
+            this.mtb_ThicknessOfPen.Mask = "000";
+            this.mtb_ThicknessOfPen.Name = "mtb_ThicknessOfPen";
+            this.mtb_ThicknessOfPen.Size = new System.Drawing.Size(23, 23);
+            this.mtb_ThicknessOfPen.TabIndex = 4;
+            this.mtb_ThicknessOfPen.ValidatingType = typeof(int);
+            this.mtb_ThicknessOfPen.Leave += new System.EventHandler(this.mtb_ThicknessOfPen_Leave);
             // 
-            // btn_chooseColor
+            // btn_chooseColorOfPen
             // 
-            this.btn_chooseColor.Location = new System.Drawing.Point(133, 97);
-            this.btn_chooseColor.Name = "btn_chooseColor";
-            this.btn_chooseColor.Size = new System.Drawing.Size(127, 24);
-            this.btn_chooseColor.TabIndex = 3;
-            this.btn_chooseColor.Text = "Choose color of pen";
-            this.btn_chooseColor.UseVisualStyleBackColor = true;
-            this.btn_chooseColor.Click += new System.EventHandler(this.btn_chooseColor_Click);
+            this.btn_chooseColorOfPen.Location = new System.Drawing.Point(133, 97);
+            this.btn_chooseColorOfPen.Name = "btn_chooseColorOfPen";
+            this.btn_chooseColorOfPen.Size = new System.Drawing.Size(127, 24);
+            this.btn_chooseColorOfPen.TabIndex = 3;
+            this.btn_chooseColorOfPen.Text = "Choose color of pen";
+            this.btn_chooseColorOfPen.UseVisualStyleBackColor = true;
+            this.btn_chooseColorOfPen.Click += new System.EventHandler(this.btn_chooseColorOfPen_Click);
             // 
             // panel_FigurePaper
             // 
@@ -170,15 +190,6 @@ namespace GeometryFigures4
             this.panel_FigurePaper.Size = new System.Drawing.Size(534, 426);
             this.panel_FigurePaper.TabIndex = 8;
             this.panel_FigurePaper.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_FigurePaper_Paint);
-            // 
-            // lb_chooseFigure
-            // 
-            this.lb_chooseFigure.AutoSize = true;
-            this.lb_chooseFigure.Location = new System.Drawing.Point(3, 15);
-            this.lb_chooseFigure.Name = "lb_chooseFigure";
-            this.lb_chooseFigure.Size = new System.Drawing.Size(81, 15);
-            this.lb_chooseFigure.TabIndex = 6;
-            this.lb_chooseFigure.Text = "Choose figure";
             // 
             // form_geometryFigures
             // 
@@ -212,11 +223,12 @@ namespace GeometryFigures4
         private System.Windows.Forms.ToolStripMenuItem clearFiguresToolStripMenuItem;
         internal System.Windows.Forms.Panel panel_chooseFigure;
         internal System.Windows.Forms.Panel panel_FigurePaper;
-        private System.Windows.Forms.Button btn_chooseColor;
+        private System.Windows.Forms.Button btn_chooseColorOfPen;
         private System.Windows.Forms.ColorDialog colorDialog;
         private System.Windows.Forms.Label lb_ThicknessOfPen;
-        private System.Windows.Forms.MaskedTextBox mtb_chooseThicknessOfPen;
+        private System.Windows.Forms.MaskedTextBox mtb_ThicknessOfPen;
         private System.Windows.Forms.Label lb_chooseFigure;
+        private System.Windows.Forms.Label lb_descriptionToColorAndThickness;
     }
 }
 

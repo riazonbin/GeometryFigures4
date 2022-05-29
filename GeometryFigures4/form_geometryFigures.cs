@@ -88,15 +88,15 @@ namespace GeometryFigures4
             Figures.Draw(paper);
         }
 
-        private void btn_chooseColor_Click(object sender, EventArgs e)
+        private void btn_chooseColorOfPen_Click(object sender, EventArgs e)
         {
             colorDialog.ShowDialog();
             colorOfPen = colorDialog.Color;
         }
 
-        private void mtb_chooseThicknessOfPen_Leave(object sender, EventArgs e)
+        private void mtb_ThicknessOfPen_Leave(object sender, EventArgs e)
         {
-            thicknessOfPen = int.Parse(mtb_chooseThicknessOfPen.Text);
+            thicknessOfPen = int.Parse(mtb_ThicknessOfPen.Text);
         }
     }
 }
